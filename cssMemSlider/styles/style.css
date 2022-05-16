@@ -24,10 +24,8 @@ body {
 }
 
 .slider {
-    /* background-color: #ddd8d877; */
     width: 100%;
     height: 70vh;
-    /* height: 400px; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -45,30 +43,16 @@ body {
 .slides {
     display: block;
     position: relative;
-    /* display: flex; */
-    /* overflow: hidden; */
-    height: inherit;
-    /* height: 90%; */
+    height: 100%;
 }
 
 .slide {
     height: 100%;
     position: relative;
-    /* position: absolute; */
-    /* transform: translate(100px, 0px); */
-    /* height: 90%; */
-    /* opacity: 0; */
-    /* z-index: 0; */
-    /* position: absolute; */
-    /* height: inherit; */
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    /* transition: .5s linear; */
-    /* transition: .5s ease-in-out; */
-    /* transform: scale(0.9) rotate(2deg) translate(100px, 0px); */
-    /* animation: listingAnimation .5s linear 0s; */
 }
 
 .slide::after {
@@ -87,37 +71,15 @@ body {
     font-variant: small-caps;
     text-align: left;
     transition: .5s ease-in-out;
-    /* animation: listingAnimation 0.5s linear forwards 0s; */
-
 }
 
 @media screen and (max-width: 768px) {
     .slide::after {
         width: 100%;
-        /* text-align: center; */
         bottom: -120px;
     }
 }
 
-/* .slide1 {
-    background-image: url("../img/mem1.jpg");
-}
-
-.slide2 {
-    background-image: url("../img/mem2.jpg");
-}
-
-.slide3 {
-    background-image: url("../img/mem3.jpg");
-}
-
-.slide4 {
-    background-image: url("../img/mem4.jpg");
-} */
-
-/* .btns {
-    display: flex;
-} */
 .slider > input {
     display: none;
 }
@@ -141,12 +103,6 @@ body {
 }
 
 .slider-btn {
-    /* display: inline-block; */
-    
-    /* appearance: none; */
-    /* padding: 10px; */
-    /* float: left; */
-    /* display: inline-block; */
     margin: 10px;
     width: 15px;
     height: 15px;
@@ -165,16 +121,8 @@ body {
 }
 
 .slider-btn:hover {
-    /* border-color: #000000; */
     border-width: 5px;
 }
-
-/* .slider-btn:checked {
-    background-color: #ffffff;
-}
-.slider-btn:checked:hover {
-    border-color: #ffffff;
-} */
 
 #slide1:checked ~ .labels > .slider-btn1,
 #slide2:checked ~ .labels > .slider-btn2,
@@ -183,52 +131,24 @@ body {
     background-color: #ffffff;
 }
 
-/* #slide1:checked ~ .labels > .text {
-    content: 'slide 1';
-}
-
-#slide2:checked ~ .labels > .slide {
-    content: 'slide 2';
-} */
-
-/* #slide1:checked ~ .slides > .slide1,
-#slide2:checked ~ .slides > .slide2,
-#slide3:checked ~ .slides > .slide3,
-#slide4:checked ~ .slides > .slide4 {
-    opacity: 1;
-    z-index: 1;
-} */
-
-/* .radio:checked ~ .slides > .slide {
-    animation: listingAnimation 0.5s linear forwards 0s;
-    transition: .5s ease-in-out;
-} */
-
 #slide1:checked ~ .slides > .slide {
     background-image: url("../img/mem1.jpg");
     animation: listingAnimation1 0.5s linear forwards 0s;
-
 }
 
 #slide1:checked ~ .slides > .slide::after {
     content: "Diving";
-    /* transform: scale(.9);
-    transform: translateX(100px, 0); */
     animation: listingAnimation2 0.5s linear forwards 0s;
-    /* transition: .5s ease-in-out; */
-
 }
 
 #slide2:checked ~ .slides > .slide {
     background-image: url("../img/mem2.jpg");
     animation: listingAnimation3 0.5s linear forwards 0s;
-
 }
 
 #slide2:checked ~ .slides > .slide::after {
     content: "Hi! =)";
     animation: listingAnimation4 0.5s linear forwards 0s;
-
 }
 
 #slide3:checked ~ .slides > .slide {
