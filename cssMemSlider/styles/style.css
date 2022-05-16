@@ -152,7 +152,7 @@ body {
 }
 
 #slide3:checked ~ .slides > .slide {
-    background-image: url("../img/mem3.jpg");
+    background-image: url("../img/mem3.png");
     animation: listingAnimation5 0.5s linear forwards 0s;
 }
 
@@ -170,19 +170,6 @@ body {
     content: "Recursion(Recursion)";
     animation: listingAnimation8 0.5s linear forwards 0s;
 }
-
-/* @keyframes listingAnimation {
-    0% {
-        opacity: 0;
-        transform: scale(1) rotate(0deg) translate(100px, 0px);
-        animation-timing-function: ease-out;
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1) rotate(0deg) translate(0px, 0px);
-    }
-} */
 
 @keyframes listingAnimation1 {
     0% {
