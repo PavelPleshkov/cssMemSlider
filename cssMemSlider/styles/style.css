@@ -1,0 +1,299 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000000c3;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 20px 50px;
+    margin: 0 auto;
+    background-color: #000000;
+    box-sizing: border-box;
+}
+
+.slider {
+    background-color: #ddd8d877;
+    width: 100%;
+    height: 70vh;
+    /* height: 400px; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 20px 50px;
+}
+
+.slides {
+    display: block;
+    position: relative;
+    /* display: flex; */
+    /* overflow: hidden; */
+    height: inherit;
+    /* height: 90%; */
+}
+
+.slide {
+    height: 100%;
+    position: relative;
+    /* position: absolute; */
+    /* transform: translate(100px, 0px); */
+    /* height: 90%; */
+    /* opacity: 0; */
+    /* z-index: 0; */
+    /* position: absolute; */
+    /* height: inherit; */
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* transition: .5s linear; */
+    /* transition: .5s ease-in-out; */
+    /* transform: scale(0.9) rotate(2deg) translate(100px, 0px); */
+    /* animation: listingAnimation .5s linear 0s; */
+}
+
+.slide::after {
+    display: block;
+    width: 100%;
+    content: 'Slide 0';
+    position: absolute;
+    bottom: -60px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-family:monospace;
+    font-style: italic;
+    font-variant: small-caps;
+    text-align: left;
+    transition: .5s ease-in-out;
+    /* animation: listingAnimation 0.5s linear forwards 0s; */
+
+}
+
+@media screen and (max-width: 768px) {
+    .slide::after {
+        display: block;
+        width: 100%;
+        content: 'Slide 0';
+        position: absolute;
+        bottom: -60px;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-family: 'Courier New', Courier, monospace;
+        font-family:monospace;
+        font-style: italic;
+        font-variant: small-caps;
+        text-align: center;
+    }
+}
+
+/* .slide1 {
+    background-image: url("../img/mem1.jpg");
+}
+
+.slide2 {
+    background-image: url("../img/mem2.jpg");
+}
+
+.slide3 {
+    background-image: url("../img/mem3.jpg");
+}
+
+.slide4 {
+    background-image: url("../img/mem4.jpg");
+} */
+
+/* .btns {
+    display: flex;
+} */
+.slider > input {
+    display: none;
+}
+
+.labels {
+    position: relative;
+    z-index: 2;
+    float: right;
+    width: fit-content;
+    display: flex;
+    align-self: flex-end;
+    margin-right: 50px;
+}
+
+.slider-btn {
+    /* display: inline-block; */
+    
+    /* appearance: none; */
+    /* padding: 10px; */
+    /* float: left; */
+    /* display: inline-block; */
+    margin: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+.slider-btn:hover {
+    /* border-color: #000000; */
+    border-width: 5px;
+}
+
+/* .slider-btn:checked {
+    background-color: #ffffff;
+}
+.slider-btn:checked:hover {
+    border-color: #ffffff;
+} */
+
+#slide1:checked ~ .labels > .slider-btn1,
+#slide2:checked ~ .labels > .slider-btn2,
+#slide3:checked ~ .labels > .slider-btn3,
+#slide4:checked ~ .labels > .slider-btn4 {
+    background-color: #ffffff;
+}
+
+/* #slide1:checked ~ .labels > .text {
+    content: 'slide 1';
+}
+
+#slide2:checked ~ .labels > .slide {
+    content: 'slide 2';
+} */
+
+/* #slide1:checked ~ .slides > .slide1,
+#slide2:checked ~ .slides > .slide2,
+#slide3:checked ~ .slides > .slide3,
+#slide4:checked ~ .slides > .slide4 {
+    opacity: 1;
+    z-index: 1;
+} */
+
+/* .radio:checked ~ .slides > .slide {
+    animation: listingAnimation 0.5s linear forwards 0s;
+    transition: .5s ease-in-out;
+} */
+
+#slide1:checked ~ .slides > .slide {
+    background-image: url("../img/mem1.jpg");
+    animation: listingAnimation 0.5s linear forwards 0s;
+
+}
+
+#slide1:checked ~ .slides > .slide::after {
+    content: "Diving";
+    /* transform: scale(.9);
+    transform: translateX(100px, 0); */
+    animation: listingAnimation1 0.5s linear forwards 0s;
+    /* transition: .5s ease-in-out; */
+
+}
+
+#slide2:checked ~ .slides > .slide {
+    background-image: url("../img/mem2.jpg");
+    animation: listingAnimation1 0.5s linear forwards 0s;
+
+}
+
+#slide2:checked ~ .slides > .slide::after {
+    content: "Hi! =)";
+    animation: listingAnimation 0.5s linear forwards 0s;
+
+}
+
+#slide3:checked ~ .slides > .slide {
+    background-image: url("../img/mem3.jpg");
+    animation: listingAnimation 0.5s linear forwards 0s;
+    animation-fill-mode: both;
+}
+
+#slide3:checked ~ .slides > .slide::after {
+    content: "Types";
+    animation: listingAnimation3 0.5s linear forwards 0s;
+}
+
+#slide4:checked ~ .slides > .slide {
+    background-image: url("../img/mem4.jpg");
+}
+
+#slide4:checked ~ .slides > .slide::after {
+    content: "Recursion is recursion";
+    animation: listingAnimation4 0.5s linear forwards 0s;
+}
+
+@keyframes listingAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(1) rotate(0deg) translate(100px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes listingAnimation1 {
+    0% {
+        opacity: 0;
+        transform: scale(1) rotate(5deg) translate(10px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes listingAnimation2 {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) rotate(2deg) translate(-100px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes listingAnimation3 {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) rotate(2deg) translate(-100px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes listingAnimation4 {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) rotate(45deg) translate(100px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+}
