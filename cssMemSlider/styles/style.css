@@ -111,6 +111,7 @@ body {
     border-radius: 50%;
     box-sizing: border-box;
     transition: .2s;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
