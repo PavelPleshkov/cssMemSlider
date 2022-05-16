@@ -12,12 +12,12 @@ body {
     max-width: 1280px;
     padding: 20px 50px;
     margin: 0 auto;
-    background-color: #000000;
+    background-color: #00000091;
     box-sizing: border-box;
 }
 
 .slider {
-    background-color: #ddd8d877;
+    /* background-color: #ddd8d877; */
     width: 100%;
     height: 70vh;
     /* height: 400px; */
@@ -188,7 +188,7 @@ body {
 
 #slide1:checked ~ .slides > .slide {
     background-image: url("../img/mem1.jpg");
-    animation: listingAnimation 0.5s linear forwards 0s;
+    animation: listingAnimation1 0.5s linear forwards 0s;
 
 }
 
@@ -196,44 +196,44 @@ body {
     content: "Diving";
     /* transform: scale(.9);
     transform: translateX(100px, 0); */
-    animation: listingAnimation1 0.5s linear forwards 0s;
+    animation: listingAnimation2 0.5s linear forwards 0s;
     /* transition: .5s ease-in-out; */
 
 }
 
 #slide2:checked ~ .slides > .slide {
     background-image: url("../img/mem2.jpg");
-    animation: listingAnimation1 0.5s linear forwards 0s;
+    animation: listingAnimation3 0.5s linear forwards 0s;
 
 }
 
 #slide2:checked ~ .slides > .slide::after {
     content: "Hi! =)";
-    animation: listingAnimation 0.5s linear forwards 0s;
+    animation: listingAnimation4 0.5s linear forwards 0s;
 
 }
 
 #slide3:checked ~ .slides > .slide {
     background-image: url("../img/mem3.jpg");
-    animation: listingAnimation 0.5s linear forwards 0s;
-    animation-fill-mode: both;
+    animation: listingAnimation5 0.5s linear forwards 0s;
 }
 
 #slide3:checked ~ .slides > .slide::after {
     content: "Types";
-    animation: listingAnimation3 0.5s linear forwards 0s;
+    animation: listingAnimation6 0.5s linear forwards 0s;
 }
 
 #slide4:checked ~ .slides > .slide {
     background-image: url("../img/mem4.jpg");
+    animation: listingAnimation7 0.5s linear forwards 0s;
 }
 
 #slide4:checked ~ .slides > .slide::after {
     content: "Recursion is recursion";
-    animation: listingAnimation4 0.5s linear forwards 0s;
+    animation: listingAnimation8 0.5s linear forwards 0s;
 }
 
-@keyframes listingAnimation {
+/* @keyframes listingAnimation {
     0% {
         opacity: 0;
         transform: scale(1) rotate(0deg) translate(100px, 0px);
@@ -244,12 +244,12 @@ body {
         opacity: 1;
         transform: scale(1) rotate(0deg) translate(0px, 0px);
     }
-}
+} */
 
 @keyframes listingAnimation1 {
     0% {
         opacity: 0;
-        transform: scale(1) rotate(5deg) translate(10px, 0px);
+        transform: scale(1) rotate(0deg) translate(50px, 0px);
         animation-timing-function: ease-out;
     }
 
@@ -262,7 +262,7 @@ body {
 @keyframes listingAnimation2 {
     0% {
         opacity: 0;
-        transform: scale(0.9) rotate(2deg) translate(-100px, 0px);
+        transform: scale(1) rotate(5deg) translate(30px, 0px);
         animation-timing-function: ease-out;
     }
 
@@ -275,7 +275,7 @@ body {
 @keyframes listingAnimation3 {
     0% {
         opacity: 0;
-        transform: scale(0.9) rotate(2deg) translate(-100px, 0px);
+        transform: scale(1) rotate(0deg) translate(50px, 0px);
         animation-timing-function: ease-out;
     }
 
@@ -288,7 +288,59 @@ body {
 @keyframes listingAnimation4 {
     0% {
         opacity: 0;
-        transform: scale(0.9) rotate(45deg) translate(100px, 0px);
+        transform: scale(1) rotate(5deg) translate(30px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes listingAnimation5 {
+    0% {
+        opacity: 0;
+        transform: scale(1) rotate(0deg) translate(50px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes listingAnimation6 {
+    0% {
+        opacity: 0;
+        transform: scale(1) rotate(5deg) translate(30px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes listingAnimation7 {
+    0% {
+        opacity: 0;
+        transform: scale(1) rotate(0deg) translate(50px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes listingAnimation8 {
+    0% {
+        opacity: 0;
+        transform: scale(1) rotate(5deg) translate(30px, 0px);
         animation-timing-function: ease-out;
     }
 
